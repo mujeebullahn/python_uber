@@ -6,3 +6,7 @@
 apt_update 'update_sources' do
   action:update
 end
+
+package 'python' do
+  action :install
+end
