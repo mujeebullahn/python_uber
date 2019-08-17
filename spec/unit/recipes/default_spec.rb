@@ -16,19 +16,30 @@ describe 'python::default' do
       expect { chef_run }.to_not raise_error
     end
 
+    it 'run apt-get update' do
+      expect(chef_run).to update_apt_update 'update_sources'
+    end
+
     it 'should install python' do
       expect(chef_run).to install_package "python"
     end
 
     it 'should install pip' do
-      expect(chef_run).to install_package 'pip'
+      expect(chef_run).to install_package "python-pip"
+    end
+
+    it 'should install Flask' do
+      expect(chef_run).to install_package "Flask"
+    end
+
+    it 'should install Jinja2' do
+      expect(chef_run).to install_package "Jija2"
     end
 
 
 
-    it 'run apt-get update' do
-      expect(chef_run).to update_apt_update 'update_sources'
-    end
+
+
 
   end
 end

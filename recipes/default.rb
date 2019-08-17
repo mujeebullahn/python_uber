@@ -11,6 +11,14 @@ package 'python' do
   action :install
 end
 
-package 'pip' do
+package 'python-pip' do
+  action :install
+end
+
+package 'Flask' do
+  action :install
+end
+
+package 'Jija2' do
   action :install
 end
