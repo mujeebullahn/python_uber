@@ -15,10 +15,10 @@ package 'python-pip' do
   action :install
 end
 
-package 'Flask' do
-  action :install
-end
+# package 'Flask' do
+#   action :install
+# end
 
-package 'Jija2' do
-  action :install
-end
+# package 'Jija2' do
+#   action :install
+# end

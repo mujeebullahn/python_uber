@@ -15,6 +15,10 @@ describe port(80), :skip do
   it { should_not be_listening }
 end
 
-# describe pip('package_name') do
-#   it { should be_installed }
-# end
+describe "python" do
+  it { should be_installed }
+end
+
+describe package "python-pip" do
+  it { should be_installed }
+end
