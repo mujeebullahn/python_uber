@@ -15,6 +15,11 @@ package 'python-pip' do
   action :install
 end
 
+#due to permissions denying i had to do these two packages
+package 'libncurses5-dev' do
+  action :install
+end
+
 execute 'install flask for python' do
   command 'pip install --user flask==0.10.1'
 end
@@ -48,7 +53,7 @@ execute 'install requests==2.3.0 for python' do
 end
 
 execute 'install wsgiref==0.1.2 for python' do
-  command 'pip install--user wsgiref==0.1.2'
+  command 'pip install --user wsgiref==0.1.2'
 end
 
 execute 'install gunicorn==18.0 for python' do
