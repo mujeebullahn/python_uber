@@ -15,10 +15,6 @@ package 'python-pip' do
   action :install
 end
 
-# package 'Flask' do
-#   action :install
-# end
-
-# package 'Jija2' do
-#   action :install
-# end
+execute 'install flask for python' do
+  command 'pip install flask==0.10.1'
+end
