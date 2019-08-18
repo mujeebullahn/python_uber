@@ -28,8 +28,12 @@ describe 'python::default' do
       expect(chef_run).to install_package "python-pip"
     end
 
-    it 'should install flask' do
+    it 'should install flask==0.10.1' do
       expect(chef_run).to run_execute "install flask for python"
+    end
+
+    it 'should install flasFlask-SSLify==0.1.4' do
+      expect(chef_run).to run_execute "install Flask-SSLify==0.1.4 for python"
     end
 
 
