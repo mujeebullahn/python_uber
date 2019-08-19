@@ -32,14 +32,41 @@ describe 'python::default' do
       expect(chef_run).to run_execute "install flask for python"
     end
 
+    it 'should install jinja2' do
+      expect(chef_run).to run_execute "install jinja2 for python"
+    end
+
     it 'should install flasFlask-SSLify==0.1.4' do
       expect(chef_run).to run_execute "install Flask-SSLify==0.1.4 for python"
     end
 
+    it 'should install pytest==2.5.2' do
+      expect(chef_run).to run_execute "install pytest==2.5.2 for python"
+    end
 
+    it 'should install pytest-cov==1.6' do
+      expect(chef_run).to run_execute "install pytest-cov==1.6 for python"
+    end
 
+    it 'should install betamax==0.4.0' do
+      expect(chef_run).to run_execute "install betamax==0.4.0 for python"
+    end
 
+    it 'should install flake8==2.1.0' do
+      expect(chef_run).to run_execute "install flake8==2.1.0 for python"
+    end
 
+    it 'should install pep8==1.5.6' do
+      expect(chef_run).to run_execute "install pep8==1.5.6 for python"
+    end
+
+    it 'should install pyflakes==0.8.1' do
+      expect(chef_run).to run_execute "install pyflakes==0.8.1 for python"
+    end
+
+    it 'should install coveralls==0.4.2' do
+      expect(chef_run).to run_execute "install coveralls==0.4.2 for python"
+    end
 
   end
 end
